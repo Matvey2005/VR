@@ -1,0 +1,16 @@
+# Папки, генерируемые Unity
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+
+# Файлы, генерируемые IDE (Visual Studio / Rider)
+.vs/
+.idea/
+*.csproj
+*.sln
+*.user
+*.userprefs

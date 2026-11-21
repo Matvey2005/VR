@@ -1,0 +1,64 @@
+# Materials for NuclearStationInterior
+newmtl Concrete
+Kd 0.320 0.340 0.360
+Ka 0.05 0.05 0.05
+Ks 0.15 0.15 0.15
+Ns 30
+
+newmtl FloorMetal
+Kd 0.120 0.140 0.160
+Ka 0.05 0.05 0.05
+Ks 0.5 0.5 0.5
+Ns 90
+
+newmtl DarkMetal
+Kd 0.055 0.065 0.075
+Ka 0.05 0.05 0.05
+Ks 0.5 0.5 0.5
+Ns 90
+
+newmtl Steel
+Kd 0.280 0.300 0.320
+Ka 0.05 0.05 0.05
+Ks 0.5 0.5 0.5
+Ns 90
+
+newmtl Pipe
+Kd 0.200 0.220 0.240
+Ka 0.05 0.05 0.05
+Ks 0.5 0.5 0.5
+Ns 90
+
+newmtl Yellow
+Kd 0.950 0.620 0.030
+Ka 0.05 0.05 0.05
+Ke 0.25 0.15 0.01
+Ks 0.25 0.25 0.25
+Ns 40
+
+newmtl White
+Kd 0.780 0.820 0.840
+Ka 0.05 0.05 0.05
+Ks 0.15 0.15 0.15
+Ns 30
+
+newmtl Lamp
+Kd 0.950 0.970 1.000
+Ka 0.05 0.05 0.05
+Ke 2.5 2.5 2.5
+Ks 0.1 0.1 0.1
+Ns 20
+
+newmtl Red
+Kd 0.750 0.030 0.020
+Ka 0.05 0.05 0.05
+Ke 2.5 0.02 0.01
+Ks 0.1 0.1 0.1
+Ns 20
+
+newmtl Glass
+Kd 0.120 0.320 0.360
+Ka 0.05 0.05 0.05
+Ks 0.15 0.15 0.15
+Ns 30
+
