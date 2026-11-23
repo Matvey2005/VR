@@ -1,5 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using System.Linq;
 
 public class Logic : MonoBehaviour
 {
@@ -8,6 +11,7 @@ public class Logic : MonoBehaviour
     [SerializeField] private GameObject obj2;
     [SerializeField] private GameObject obj3;
     [SerializeField] private GameObject obj4;
+    [SerializeField] public TextMeshProUGUI statusText;
 
     [Header("Настройки")]
     [SerializeField] private float timerDuration = 300f; // 5 минут в секундах
@@ -48,6 +52,7 @@ public class Logic : MonoBehaviour
             if (logTimer >= 1f)
             {
                 logTimer = 0f;
+                statusText.text = $"{FormatTime(timeRemaining)}"; // ИСПРАВЛЕНО: добавлена ;
                 Debug.Log($"[Logic] Осталось: {FormatTime(timeRemaining)} | Зелёных: {greenCount}/4");
             }
         }
@@ -70,7 +75,6 @@ public class Logic : MonoBehaviour
             if (rend != null && IsGreen(rend.material.color))
             {
                 currentGreen++;
-                //Debug.Log($"[Logic] Объект '{obj.name}' зелёный ({rend.material.color})");
             }
         }
 
@@ -86,6 +90,7 @@ public class Logic : MonoBehaviour
         {
             isFinished = true;
             isRunning = false;
+            statusText.text = "Успех!"; // ИСПРАВЛЕНО: добавлена ;
             Debug.Log($"[Logic] ВСЕ 4 ОБЪЕКТА ЗЕЛЁНЫЕ! Скрипт остановлен. Осталось времени: {FormatTime(timeRemaining)}");
         }
     }
@@ -114,4 +119,4 @@ public class Logic : MonoBehaviour
     public int GetGreenCount() => greenCount;
     public float GetTimeRemaining() => timeRemaining;
     public bool IsFinished() => isFinished;
-}
+} // ИСПРАВЛЕНО: добавлена закрывающая скобка класса
