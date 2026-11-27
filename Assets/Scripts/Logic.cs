@@ -13,6 +13,13 @@ public class Logic : MonoBehaviour
     [SerializeField] private GameObject obj4;
     [SerializeField] public TextMeshProUGUI statusText;
 
+    [Header("Звук серены")]
+    public AudioSource audioSource; // Перетащите сюда ваш Audio Source в инспекторе
+    public AudioSource audioSource2; // Перетащите сюда ваш Audio Source в инспекторе
+    public AudioClip newClip;
+    public AudioClip newClip1;
+    public Canvas canvas;
+
     [Header("Настройки")]
     [SerializeField] private float timerDuration = 300f; // 5 минут в секундах
     [SerializeField] private bool logEverySecond = false; // спамить в консоль раз в секунду
@@ -61,6 +68,12 @@ public class Logic : MonoBehaviour
         {
             timeRemaining = 0f;
             isRunning = false;
+            canvas.enabled = true;
+            audioSource2.enabled = false;
+            audioSource.clip = newClip1;
+            audioSource.loop = false;
+            audioSource.Play();
+
             Debug.LogWarning($"[Logic] Время вышло! Итоговый счёт зелёных: {greenCount}/4");
         }
 
@@ -91,6 +104,9 @@ public class Logic : MonoBehaviour
             isFinished = true;
             isRunning = false;
             statusText.text = "Успех!"; // ИСПРАВЛЕНО: добавлена ;
+            audioSource.clip = newClip;
+            audioSource.loop = false;
+            audioSource.Play();
             Debug.Log($"[Logic] ВСЕ 4 ОБЪЕКТА ЗЕЛЁНЫЕ! Скрипт остановлен. Осталось времени: {FormatTime(timeRemaining)}");
         }
     }
